@@ -145,10 +145,5 @@ export function InkBackground() {
     }
   }, [])
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 -z-10 h-full w-full"
-    />
-  )
+  return <canvas ref={canvasRef} className="fixed inset-0 -z-10 h-full w-full" />
 }
