@@ -8,7 +8,7 @@ export function CustomCursor() {
   useEffect(() => {
     const cursor = cursorRef.current
     const cursorGlow = cursorGlowRef.current
-    
+
     if (!cursor || !cursorGlow) return
 
     const moveCursor = (e) => {
@@ -18,7 +18,7 @@ export function CustomCursor() {
         duration: 0.1,
         ease: 'power2.out',
       })
-      
+
       gsap.to(cursorGlow, {
         x: e.clientX,
         y: e.clientY,
@@ -64,11 +64,11 @@ export function CustomCursor() {
     <>
       <div
         ref={cursorRef}
-        className="pointer-events-none fixed left-0 top-0 z-[9999] h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent-light mix-blend-difference"
+        className="bg-accent-light pointer-events-none fixed top-0 left-0 z-[9999] h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-difference"
       />
       <div
         ref={cursorGlowRef}
-        className="pointer-events-none fixed left-0 top-0 z-[9998] h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/30 blur-lg"
+        className="bg-accent/30 pointer-events-none fixed top-0 left-0 z-[9998] h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full blur-lg"
       />
     </>
   )

@@ -14,26 +14,22 @@ export function useScrollAnimation(animationType = 'fadeIn', options = {}) {
 
     const defaultAnimation = animationConfig[animationType] || animationConfig.fadeIn
 
-    const animation = gsap.fromTo(
-      element,
-      defaultAnimation,
-      {
-        opacity: 1,
-        y: 0,
-        x: 0,
-        scale: 1,
-        duration: options.duration || animationConfig.duration,
-        ease: options.ease || animationConfig.ease,
-        scrollTrigger: {
-          trigger: element,
-          start: options.start || 'top 80%',
-          end: options.end || 'bottom 20%',
-          toggleActions: options.toggleActions || 'play none none reverse',
-          markers: options.markers || false,
-          ...options.scrollTrigger,
-        },
-      }
-    )
+    const animation = gsap.fromTo(element, defaultAnimation, {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      scale: 1,
+      duration: options.duration || animationConfig.duration,
+      ease: options.ease || animationConfig.ease,
+      scrollTrigger: {
+        trigger: element,
+        start: options.start || 'top 80%',
+        end: options.end || 'bottom 20%',
+        toggleActions: options.toggleActions || 'play none none reverse',
+        markers: options.markers || false,
+        ...options.scrollTrigger,
+      },
+    })
 
     return () => {
       animation.kill()

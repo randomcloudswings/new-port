@@ -22,9 +22,5 @@ export function AnimationProvider({ children }) {
     config: animationConfig,
   }
 
-  return (
-    <AnimationContext.Provider value={value}>
-      {children}
-    </AnimationContext.Provider>
-  )
+  return <AnimationContext.Provider value={value}>{children}</AnimationContext.Provider>
 }
