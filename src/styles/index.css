@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: 12 12 14;
+  --foreground: 211 218 217;
+
+  --card: 68 68 78;
+  --card-foreground: 211 218 217;
+
+  --popover: 68 68 78;
+  --popover-foreground: 211 218 217;
+
+  --primary: 113 90 90;
+  --primary-foreground: 211 218 217;
+
+  --secondary: 68 68 78;
+  --secondary-foreground: 211 218 217;
+
+  --muted: 68 68 78;
+  --muted-foreground: 155 155 165;
+
+  --accent: 113 90 90;
+  --accent-foreground: 211 218 217;
+
+  --destructive: 239 68 68;
+  --destructive-foreground: 211 218 217;
+
+  --border: 68 68 78;
+  --input: 68 68 78;
+  --ring: 113 90 90;
+
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: #0c0c0e;
+  color: #D3DAD9;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  cursor: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #D3DAD9, #715A5A);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.glow {
+  text-shadow: 0 0 10px rgba(211, 218, 217, 0.5),
+               0 0 20px rgba(113, 90, 90, 0.3);
+}
